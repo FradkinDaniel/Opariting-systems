@@ -9,7 +9,7 @@ public class Main {
         int n = input.nextInt();
         SharedResources res = new SharedResources();
         Compound comp = new Compound();
-        for(int i=0;i<n+1;i++){
+        for(int i=1;i<n+1;i++){
            new Thread(new CowThread(i,res,comp)).start();
         }
     }

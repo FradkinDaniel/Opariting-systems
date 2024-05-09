@@ -56,11 +56,5 @@ public class CowThread implements Runnable {
 
         comp.walk(id);
 
-
-
-
-
-
-        comp.eat(id);
     }
 }
