@@ -1,5 +1,5 @@
 import java.util.concurrent.*;
-public class SharedReasources {
+public class SharedResources {
     Semaphore hay = new Semaphore(6);
     Semaphore drinking = new Semaphore(3);
     Semaphore milking = new Semaphore(5);
@@ -11,6 +11,7 @@ public class SharedReasources {
         walking.release();
         walking.release();
     }
+
     public void drinking(int i){
 
     }
