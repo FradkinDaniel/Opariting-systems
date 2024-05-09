@@ -11,8 +11,4 @@ public class SharedResources {
         walking.release();
         walking.release();
     }
-
-    public void drinking(int i){
-
-    }
 }
