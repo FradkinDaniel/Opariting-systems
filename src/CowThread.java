@@ -16,11 +16,14 @@ public class CowThread implements Runnable {
         // EAT
         try {
             res.hay.acquire();
+
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
         comp.eat(id);
         res.hay.release();
+
+
         // DRINK
         try {
             res.drinking.acquire();
@@ -28,14 +31,33 @@ public class CowThread implements Runnable {
             throw new RuntimeException(e);
         }
         comp.drink(id);
+        res.walking++;
         res.drinking.release();
 
-
-        if (id % 2 == 0 && comp.milked < 5){
-
+        // MILK
+        if (id % 2 == 0 && res.milked < 5) {
+            try {
+                res.milking.acquire();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             comp.milk(id);
-
+            res.milked++;
+            res.milking.release();
         }
+
+        while (res.walking < 4){
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        comp.walk(id);
+
+
+
 
 
 
