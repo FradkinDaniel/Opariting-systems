@@ -30,7 +30,12 @@ public class CowThread implements Runnable {
         comp.drink(id);
         res.drinking.release();
 
-        if(Thread.currentThread().getName())
+
+        if (id % 2 == 0 && comp.milked < 5){
+
+            comp.milk(id);
+
+        }
 
 
 
