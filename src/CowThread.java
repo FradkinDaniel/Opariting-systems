@@ -1,3 +1,6 @@
+// Or Bar Califa 318279429
+// Daniel Fradkin 316410885
+
 public class CowThread implements Runnable {
 
     final int id;

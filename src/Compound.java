@@ -1,3 +1,6 @@
+// Or Bar Califa 318279429
+// Daniel Fradkin 316410885
+
 public class Compound {
     public void eat(int id) {
         System.out.println(id + " done eating");
