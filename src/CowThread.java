@@ -4,7 +4,7 @@ public class CowThread implements Runnable {
     Compound comp;
     SharedResources res;
 
-    public CowThread(int id, SharedResources res, Compound comp){
+    public CowThread (int id, SharedResources res, Compound comp) {
         this.id = id;
         this.res = res;
         this.comp = comp;
